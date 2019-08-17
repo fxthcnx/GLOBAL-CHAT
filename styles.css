@@ -1,0 +1,9 @@
+body {
+    background-color: lightslategray;
+    min-height: 100vh;
+
+}
+.main-chat-window{
+    height: 50vh;
+    overflow: auto;
+}
