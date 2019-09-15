@@ -7,7 +7,7 @@ var app = new Vue({
       unsavedUsername: "",
     },
     created: function(){
-     db.collection("message")
+     db.collection("messages")
      .orderBy('date', 'asc')
        .onSnapshot(messagesCollection => {
          this.messages = [];
@@ -39,7 +39,7 @@ var app = new Vue({
         this.newMessage = "";
       },
       addToFirestore: function(newMessage){
-        db.collection('messages')
+        db.collection("messages")
           .add(newMessage)
           .then(function(documentId){
              console.log("doc has been inserted with id", documentId);
